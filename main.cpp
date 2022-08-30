@@ -1,19 +1,19 @@
 /*
  * Universidade Federal da Grande Dourados - UFGD.
- * Faculdade de CiÍncias Exatas e Tecnologia - FACET.
- * Bacharelado em Engenharia de ComputaÁ„o.
+ * Faculdade de Ci√™ncias Exatas e Tecnologia - FACET.
+ * Bacharelado em Engenharia de Computa√ß√£o.
  *
- * Disciplina: LaboratÛrio de ComputaÁ„o Gr·fica - LCG.
- * Professor: Adailton JosÈ Alves da Cruz.
- * PerÌodo: semestre 2022.1 || ocorrÍncia no 2∫ semestre do ano de 2022.
+ * Disciplina: Laborat√≥rio de Computa√ß√£o Gr√°fica - LCG.
+ * Professor: Adailton Jos√© Alves da Cruz.
+ * Per√≠odo: semestre 2022.1 || ocorr√™ncia no 2¬∫ semestre do ano de 2022.
  *
  * Programa: main.cpp
- * Desenvolvido por: Jo„o Vitor Nascimento De Souza.
+ * Desenvolvido por: Jo√£o Vitor Nascimento De Souza.
  *
- * Objetivo: Desenhar um BraÁo RobÙ 2D:
- * - Primitivas (quadrado e cÌrculo).
- * - TransformaÁıes geomÈtricas e de coordenadas.
- * ReferÍncia: Autoria prÛpria.
+ * Objetivo: Desenhar um Bra√ßo Rob√¥ 2D:
+ * - Primitivas (quadrado e c√≠rculo).
+ * - Transforma√ß√µes geom√©tricas e de coordenadas.
+ * Refer√™ncia: Autoria pr√≥pria.
  */
 
 // Bibliotecas utilizadas.
@@ -25,34 +25,34 @@
 #include "cabecalho.h"
 
 /*
- * FunÁ„o principal: respons·vel pela execuÁ„o do programa do inÌcio ao fim.
+ * Fun√ß√£o principal: respons√°vel pela execu√ß√£o do programa do in√≠cio ao fim.
  * Entrada: argumentos passados pelos prompt de comando.
- * SaÌda:
+ * Sa√≠da:
  * - EXIT_SUCESS: finalizado corretamente.
- * - Outros valors: ocorrÍncia de erros na execuÁ„o.
+ * - Outros valors: ocorr√™ncia de erros na execu√ß√£o.
  */
 int main(int argc, char *argv[])
 {
-    inicializa();                                // Inicializa vari·veis.
+    inicializa();                                // Inicializa vari√°veis.
     glutInit(&argc, argv);                       // Inicicializa com os argumentos passados no prompt de comando.
     glutInitWindowSize(width, height);           // Define o tamanho da janela em pixels.
-    glutInitWindowPosition(300, 200);            // Define a posiÁ„o do canto superior esquerda da janela.
-    glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE); // Descreve as configuraÁıes da janela (cores suportadas e suas caracterÌsticas).
-    glutCreateWindow("Braco Robo 2D");           // Cria a janela e inseri um tÌtulo.
+    glutInitWindowPosition(300, 200);            // Define a posi√ß√£o do canto superior esquerda da janela.
+    glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE); // Descreve as configura√ß√µes da janela (cores suportadas e suas caracter√≠sticas).
+    glutCreateWindow("Braco Robo 2D");           // Cria a janela e inseri um t√≠tulo.
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Seleciona a cor de fundo para limpeza da tela (R, G, B, A).
 
     /*
      * Rotinas callback:
-     *  Se ocorrer um evento de sistema devido a interaÁ„o com a janela criada
-     *  aciona uma dessas rotinas, executando suas funÁıes internas.
+     *  Se ocorrer um evento de sistema devido a intera√ß√£o com a janela criada
+     *  aciona uma dessas rotinas, executando suas fun√ß√µes internas.
      */
     glutReshapeFunc(resize);      // Executa o procedimento resize.
     glutDisplayFunc(display);     // Executa o procedimento display.
     glutKeyboardFunc(key);        // Executa o procedimento key.
     glutSpecialFunc(keyEspecial); // Executa o procedimento keyEspecial.
 
-    glutMainLoop(); // MantÈm o programa executando em loop, aguardando a ocorrÍncia de novos eventos com a janela.
+    glutMainLoop(); // Mant√©m o programa executando em loop, aguardando a ocorr√™ncia de novos eventos com a janela.
 
     return EXIT_SUCCESS;
 }
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 /* Rotinas callback. */
 
 /*
- * FunÁ„o respons·vel por adaptar a janela de visualizaÁ„o (Viewport) e os elementos contidos na janela (ProjeÁ„o),
+ * Fun√ß√£o respons√°vel por adaptar a janela de visualiza√ß√£o (Viewport) e os elementos contidos na janela (Proje√ß√£o),
  * caso ocorra um evento de redimensionamento de janela.
  * Entrada:
  *  - w: nova largura.
@@ -71,11 +71,11 @@ static void resize(int w, int h)
     width = w;
     height = h;
 
-    glViewport(0, 0, width, height); // Porta de visualizaÁ„o, onde ser· feitos os desenhos dos elementos.
-    glMatrixMode(GL_PROJECTION);     // Inicializa os valores de visualizaÁ„o.
+    glViewport(0, 0, width, height); // Porta de visualiza√ß√£o, onde ser√° feitos os desenhos dos elementos.
+    glMatrixMode(GL_PROJECTION);     // Inicializa os valores de visualiza√ß√£o.
     glLoadIdentity();                // Faz com que a matriz corrente seja inicializada com a matriz identidade.
 
-    // Se ocorrer de altura ser 0, altera È pelo menos 1.
+    // Se ocorrer de altura ser 0, altera √© pelo menos 1.
     if (height == 0)
         height = 1;
 
@@ -87,15 +87,15 @@ static void resize(int w, int h)
 }
 
 /*
- * Procedimento respons·vel por executar instruÁıes caso ocorra o pressionamento de teclas na janela exibida.
+ * Procedimento respons√°vel por executar instru√ß√µes caso ocorra o pressionamento de teclas na janela exibida.
  * Entrada: uma tecla digitada.
  * - "ESC": fecha o programa.
- * - "q" e "e": rotaciona a JunÁ„o 1.
- * - "a" e "d": rotaciona a JunÁ„o 2.
- * - "y" e "i": rotaciona a JunÁ„o 3.
- * - "h" e "k": rotaciona a JunÁ„o 4.
+ * - "q" e "e": rotaciona a Jun√ß√£o 1.
+ * - "a" e "d": rotaciona a Jun√ß√£o 2.
+ * - "y" e "i": rotaciona a Jun√ß√£o 3.
+ * - "h" e "k": rotaciona a Jun√ß√£o 4.
  * - "o": volta o programa como original.
- * SaÌda: Executa uma instruÁ„o.
+ * Sa√≠da: Executa uma instru√ß√£o.
  */
 static void key(unsigned char letra, int x, int y)
 {
@@ -157,13 +157,13 @@ static void key(unsigned char letra, int x, int y)
 }
 
 /*
- * Procedimento respons·vel por executar instruÁıes caso ocorra o pressionamento de teclas ESPECIAIS na janela exibida.
+ * Procedimento respons√°vel por executar instru√ß√µes caso ocorra o pressionamento de teclas ESPECIAIS na janela exibida.
  * Entrada: uma tecla digitada especial do teclado.
  * - Seta LEFT: translada para esquerda.
  * - Seta RIGHT: translada para direita.
  * - Seta UP: transalada para cima.
  * - Seta Down: translada para baixo.
- * SaÌda: Executa uma instruÁ„o.
+ * Sa√≠da: Executa uma instru√ß√£o.
  */
 static void keyEspecial(int key, int x, int y)
 {
@@ -188,17 +188,17 @@ static void keyEspecial(int key, int x, int y)
 }
 
 /*
- * Procedimento respons·vel por atualizar o display da janela.
+ * Procedimento respons√°vel por atualizar o display da janela.
  *  -> Mostra todos os desenhos.
  */
 static void display()
 {
     glClear(GL_COLOR_BUFFER_BIT); // Limpa o buffer de cores atual da janela.
 
-    glMatrixMode(GL_MODELVIEW); // Matriz corrente, contendo todas as transformaÁıes geomÈtricas em um determinado momento.
+    glMatrixMode(GL_MODELVIEW); // Matriz corrente, contendo todas as transforma√ß√µes geom√©tricas em um determinado momento.
     glLoadIdentity();           // Faz com que a matriz corrente seja inicializada com a matriz identidade.
 
-    /* Utiliza transformaÁıes de COORDENADAS. */
+    /* Utiliza transforma√ß√µes de COORDENADAS. */
 
     /* draw Base. */
     glTranslatef(translada[0], translada[1], 0); // Permite transaladar todos os objetos do desenho.
@@ -207,14 +207,14 @@ static void display()
 
     /* draw Membro 1. */
     glTranslatef(10, 7, 0);           // 10 - 3 = 7
-    glScalef(0.33, 1, 1);             // Escala volta ao valor padr„o.
+    glScalef(0.33, 1, 1);             // Escala volta ao valor padr√£o.
     glRotatef(rotaciona[0], 0, 0, 1); // Rotaciona o Membro 1 e a Junta 1.
     glScalef(3, 1, 1);
     Quadrado();
 
     /* draw Junta 1. */
-    glScalef(0.33, 1, 1); // Escala volta ao valor padr„o.
-    Circulo(11);          // Desenha um cÌculo de raio 11.
+    glScalef(0.33, 1, 1); // Escala volta ao valor padr√£o.
+    Circulo(11);          // Desenha um c√≠culo de raio 11.
 
     /* draw Membro 2. */
     glTranslatef(57, 0, 0);           // 60 - 3 = 57.
@@ -223,8 +223,8 @@ static void display()
     Quadrado();
 
     /* draw Junta 2. */
-    glScalef(0.33, 1, 1); // Escala volta a ser o valor padr„o.
-    Circulo(11);          // Desenha um cÌculo de raio 11.
+    glScalef(0.33, 1, 1); // Escala volta a ser o valor padr√£o.
+    Circulo(11);          // Desenha um c√≠culo de raio 11.
 
     /* draw Membro 3. */
     glTranslatef(57, 0, 0);           // 60 - 3 igual os outros.
@@ -233,8 +233,8 @@ static void display()
     Quadrado();
 
     /* draw Junta 3. */
-    glScalef(0.33, 1, 1); // Escala volta a ser o valor padr„o.
-    Circulo(10);          // Desenha um cÌculo de raio 10.
+    glScalef(0.33, 1, 1); // Escala volta a ser o valor padr√£o.
+    Circulo(10);          // Desenha um c√≠culo de raio 10.
 
     /* draw palma. */
     glTranslatef(57, 0, 0);           // 60 - 3 igual os outros.
@@ -243,10 +243,10 @@ static void display()
     Quadrado();
 
     /* draw Junta 4. */
-    glScalef(1.33, 0.5, 1); // Escala volta a ser o valor padr„o.
-    Circulo(10);            // Desenha um cÌculo de raio 10.
+    glScalef(1.33, 0.5, 1); // Escala volta a ser o valor padr√£o.
+    Circulo(10);            // Desenha um c√≠culo de raio 10.
 
-    // Salva a posiÁ„o atual dos eixos, para voltar a essa configuraÁ„o posteriormente.
+    // Salva a posi√ß√£o atual dos eixos, para voltar a essa configura√ß√£o posteriormente.
     glPushMatrix();
 
     // A palma foi reduzida em x de 1 para 0.75, logo seu tamanho em x foi para 20*0.75 = 15
@@ -257,7 +257,7 @@ static void display()
     glScalef(1, 0.5, 1);
     Quadrado();
 
-    // Carrega a matriz armazenada na memÛria na matriz corrente.
+    // Carrega a matriz armazenada na mem√≥ria na matriz corrente.
     glPopMatrix();
 
     /* draw dedo direito. */
@@ -268,7 +268,7 @@ static void display()
     // PontosExtremos();
     // Eixos();
 
-    glFlush(); // Faz os comandos n„o executados serem executados.
+    glFlush(); // Faz os comandos n√£o executados serem executados.
 }
 
 /* Primitiva. */
@@ -291,16 +291,16 @@ void Quadrado()
 }
 
 /*
- * Desenha um cÌrculo cinza com borda na cor vermelho.
- * - Desenha o cÌrculo externo primeiro com valor de raio = raio.
- * - Desenha o cÌrculo interno por ˙ltimo com valor de radio reduzido.
+ * Desenha um c√≠rculo cinza com borda na cor vermelho.
+ * - Desenha o c√≠rculo externo primeiro com valor de raio = raio.
+ * - Desenha o c√≠rculo interno por √∫ltimo com valor de radio reduzido.
  */
 void Circulo(float raio)
 {
     int i, pts = 60;
     float radianos, angulo = 0, aumento = 360 / pts;
 
-    // CÌrculo externo.
+    // C√≠rculo externo.
     glColor3f(1, 0, 0); // Cor Vermelho.
     glBegin(GL_POLYGON);
     for (i = 0; i < pts; i++)
@@ -311,7 +311,7 @@ void Circulo(float raio)
     }
     glEnd();
 
-    // CÌrculo interno.
+    // C√≠rculo interno.
     angulo = 0;
     raio = raio * 0.85;       // Reduz o tamanho do raio em 15%.
     glColor3f(0.3, 0.3, 0.3); // Cor Cinza escuro.
@@ -328,7 +328,7 @@ void Circulo(float raio)
 /* Outras rotinas. */
 
 /*
- * InicializaÁ„o das vari·veis globais.
+ * Inicializa√ß√£o das vari√°veis globais.
  */
 void inicializa()
 {
@@ -362,7 +362,7 @@ void Eixos()
 }
 
 /*
- * Mostra a posiÁ„o dos extremos para o eixo x e para o eixo y.
+ * Mostra a posi√ß√£o dos extremos para o eixo x e para o eixo y.
  */
 void PontosExtremos()
 {

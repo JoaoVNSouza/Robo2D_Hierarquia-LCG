@@ -2,14 +2,14 @@
 #define CABECALHO_H_INCLUDED
 
 // Constantes.
-#define win 100    // Constante que armazena o valor de coordenadas para orientaÁ„o x e y.
+#define win 100    // Constante que armazena o valor de coordenadas para orienta√ß√£o x e y.
 #define PI 3.14159 // Constante PI.
 
-// Vari·veis globais.
+// Vari√°veis globais.
 GLfloat width, height;              // Armazena o tamanho da janela, para eventos de redimensionar a janela.
-GLfloat rotaciona[4], translada[2]; // Vari·veis para animar o objeto. (Rotacionar e transaladar)
+GLfloat rotaciona[4], translada[2]; // Vari√°veis para animar o objeto. (Rotacionar e transaladar)
 
-/* ProtÛtipos de FunÁıes/Procedimentos. */
+/* Prot√≥tipos de Fun√ß√µes/Procedimentos. */
 // Rotinas callbacks.
 static void resize(int, int);
 static void display();
