@@ -13,5 +13,5 @@
 ### -- gltranslatef().
 
 <div align="center">
-<img src="https://github.com/JoaoVNSouza/Robo2D_Hierarquia-LCG/blob/main/print%20da%20tela.png?raw=true" width=500px/>
+<img src="https://github.com/JoaoVNSouza/Robo2D_Hierarquia-LCG/blob/main/print%20da%20tela.png?raw=true" width=800px/>
 </div>
